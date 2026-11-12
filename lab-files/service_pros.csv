@@ -1,0 +1,13 @@
+service_pro_id,name,primary_skill,skills
+pro-001,Alex Morgan,painting,painting;hanging;drilling
+pro-002,Sam Rivera,plumbing,plumbing;repair;diagnostics
+pro-003,Jordan Lee,electrical,electrical;lighting;fixtures
+pro-004,Taylor Kim,carpentry,carpentry;doors;trim
+pro-005,Casey Patel,appliance,appliance;installation;repair
+pro-006,Riley Chen,hvac,hvac;maintenance;filters
+pro-007,Morgan Brooks,flooring,flooring;tile;grout
+pro-008,Jamie Wilson,drywall,drywall;patching;painting
+pro-009,Avery Martinez,outdoor,outdoor;fencing;gates
+pro-010,Quinn Davis,smart home,smart home;networking;security
+pro-011,Drew Thompson,assembly,assembly;mounting;furniture
+pro-012,Skyler Nguyen,windows,windows;weatherproofing;sealing
