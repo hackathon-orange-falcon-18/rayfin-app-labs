@@ -12,6 +12,13 @@
   // Ask for at least a 4-core machine; npm install and Vite builds are slow on 2 cores.
   "hostRequirements": { "cpus": 4 },
 
+  // Codespaces has no OS keychain, so let the Rayfin CLI store its sign-in token
+  // in a file. The file stays inside each participant's private codespace and is
+  // deleted with it.
+  "containerEnv": {
+    "RAYFIN_ENCRYPTION_FALLBACK_ENABLED": "true"
+  },
+
   // Runs during the prebuild, so its result is baked into every participant's codespace.
   "updateContentCommand": "bash .devcontainer/warm-cache.sh",
 
