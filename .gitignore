@@ -1,0 +1,17 @@
+# Dependencies and build output
+node_modules/
+dist/
+*.tsbuildinfo
+
+# Environment and secret-bearing files (generated per participant by Rayfin)
+.env
+.env.local
+.env.*.local
+.deployments.json
+.temp/
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+.idea/
+*.swp
