@@ -1,0 +1,36 @@
+{
+  // Codespace for Lab 4 – Rayfin with GitHub Copilot.
+  // Participants never need to edit this file.
+  "name": "Rayfin App Labs",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": { "version": "24" },
+    "ghcr.io/devcontainers/features/github-cli:1": {}
+  },
+
+  // Ask for at least a 4-core machine; npm install and Vite builds are slow on 2 cores.
+  "hostRequirements": { "cpus": 4 },
+
+  // Runs during the prebuild, so its result is baked into every participant's codespace.
+  "updateContentCommand": "bash .devcontainer/warm-cache.sh",
+
+  // Runs once when a participant's codespace is created.
+  "postCreateCommand": "bash .devcontainer/welcome.sh",
+
+  "customizations": {
+    "codespaces": {
+      "openFiles": ["README.md"]
+    },
+    "vscode": {
+      "extensions": [
+        "GitHub.copilot",
+        "GitHub.copilot-chat"
+      ],
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash",
+        "git.autofetch": false
+      }
+    }
+  }
+}
