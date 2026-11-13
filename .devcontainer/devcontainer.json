@@ -20,7 +20,10 @@
   },
 
   // Runs during the prebuild, so its result is baked into every participant's codespace.
-  "updateContentCommand": "bash .devcontainer/warm-cache.sh",
+  // Updates the template's Rayfin packages to the latest versions (Fabric static hosting
+  // needs Rayfin CLI 1.35.1 or later). The installs also fill the npm cache, so the
+  // Lab 4 bootstrap is fast. node_modules is removed so the bootstrap does not copy it.
+  "updateContentCommand": "cd template/field-services-app && npm install --save-dev --no-audit --no-fund @microsoft/rayfin-cli@latest @microsoft/rayfin-mcp@latest && npm install --no-audit --no-fund @microsoft/rayfin-client@latest @microsoft/rayfin-core@latest @microsoft/rayfin-data@latest @microsoft/rayfin-auth-provider-fabric@latest && rm -rf node_modules",
 
   // Runs once when a participant's codespace is created.
   "postCreateCommand": "bash .devcontainer/welcome.sh",
